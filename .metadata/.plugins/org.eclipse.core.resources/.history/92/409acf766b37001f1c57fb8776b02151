@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Todo Form</title>
+</head>
+<body>
+	
+	<div class="todo-form">
+		<h2>ADD Todo</h2>
+		<form action ="">
+		<label>Title : </label>
+		<input type="text" id = "title" placeholder="Enter todo title">
+		<label>Description:</label>
+		<input type="text" id = "description" placeholder="Enter todo description">
+		<button type="submit"> Save </button>
+		</form>
+	</div>
+	
+</body>
+</html>

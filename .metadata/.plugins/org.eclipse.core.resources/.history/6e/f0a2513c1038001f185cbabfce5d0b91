@@ -1,0 +1,5 @@
+package com.tenco.filters;
+
+public class SimpleFilter {
+
+}

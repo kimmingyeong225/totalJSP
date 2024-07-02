@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename type &apos;com.tenco.todo&apos; to &apos;Todo&apos;&#x0D;&#x0A;- Original project: &apos;demo_4&apos;&#x0D;&#x0A;- Original element: &apos;com.tenco.todo&apos;&#x0D;&#x0A;- Renamed element: &apos;com.tenco.Todo&apos;&#x0D;&#x0A;- Update references to refactored element&#x0D;&#x0A;- Update textual occurrences in comments and strings" description="Rename type &apos;todo&apos;" flags="589830" id="org.eclipse.jdt.ui.rename.type" input="/src\/main\/java&lt;com.tenco{todo.java[todo" matchStrategy="1" name="Todo" qualified="false" references="true" similarDeclarations="false" stamp="1719560919940" textual="false" version="1.0"/>
+</session>

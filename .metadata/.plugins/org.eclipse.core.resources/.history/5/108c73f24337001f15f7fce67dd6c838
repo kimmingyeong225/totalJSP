@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>인라인블록 요소 예시</title>
+<style type="text/css">
+	
+	.container {
+		display: flex;
+		border: 1px solid black;
+	}
+	
+</style>
+</head>
+<body>
+ 	<!--  http://localhost:8080/demo1/demo_03.html  -->
+    <h1>여기는 demo_03.html 파일입니다.</h1>
+    <br>
+    <h3>flex-directioon : row</h3>
+    <div class="container">
+    	<div>아이템1</div>
+    	<div>아이템2</div>
+    	<div>아이템3</div>
+    </div>
+    
+</body>
+</html>
