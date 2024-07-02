@@ -25,11 +25,12 @@ public class RequesTest extends HttpServlet {
 		
 		// HTTP 요청 메시지에 시작줄에 /req-test?name="홍길동&age=100"
 		String name = request.getParameter("name");
-		//int age = request.getParameter(100);
+		int age = Integer.parseInt(request.getParameter("age"));
 		String greeting = "Hello," + (name != null ? name : "바보") + " !! ";
 		
 		
-		response.getWriter().print("<html><body><h2> "+ greeting +" </h2></body></html>");
+		
+		response.getWriter().print("<html><body><h2> "+ greeting + age +" </h2></body></html>");
 		
 		
 	}
