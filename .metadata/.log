@@ -1110,3 +1110,41 @@ org.eclipse.jgit.errors.TransportException: https://github.com/kimmingyeong225/t
 
 !ENTRY org.eclipse.egit.ui 4 0 2024-07-02 16:52:09.499
 !MESSAGE Can't connect to any repository: https://github.com/kimmingyeong225/totalJSP.git (https://github.com/kimmingyeong225/totalJSP.git: not authorized)
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2024-07-02 16:54:43.515
+!MESSAGE Classpath changed for project: test
+
+!ENTRY org.eclipse.wildwebdeveloper.xml 2 0 2024-07-02 16:54:44.095
+!MESSAGE The given URI https://jakarta.ee/xml/ns/jakartaee/application-client_9.xsd from org.eclipse.jst.standard.schemas could not be resolved for local access
+
+!ENTRY org.eclipse.wildwebdeveloper.xml 2 0 2024-07-02 16:54:44.096
+!MESSAGE The given URI https://jakarta.ee/xml/ns/jakartaee/jobXML_2_0.xsd from org.eclipse.jst.standard.schemas could not be resolved for local access
+
+!ENTRY org.eclipse.wildwebdeveloper.xml 2 0 2024-07-02 16:54:44.096
+!MESSAGE The given URI https://jakarta.ee/xml/ns/jakartaee/beans_3_0.xsd from org.eclipse.jst.standard.schemas could not be resolved for local access
+
+!ENTRY org.eclipse.wildwebdeveloper.xml 2 0 2024-07-02 16:54:44.096
+!MESSAGE The given URI https://jakarta.ee/xml/ns/jaxb/bindingschema_3_0.xsd from org.eclipse.jst.standard.schemas could not be resolved for local access
+
+!ENTRY org.eclipse.wildwebdeveloper.xml 2 0 2024-07-02 16:54:44.097
+!MESSAGE The given URI https://jakarta.ee/xml/ns/validation/validation-configuration-3.0.xsd from org.eclipse.jst.standard.schemas could not be resolved for local access
+
+!ENTRY org.eclipse.wildwebdeveloper.xml 2 0 2024-07-02 16:54:44.098
+!MESSAGE The given URI http://xmlns.jcp.org/xml/ns/javaee/web-facesconfig_2_1.xsd from org.eclipse.jst.standard.schemas could not be resolved for local access
+
+!ENTRY org.eclipse.egit.core 4 0 2024-07-02 16:56:03.205
+!MESSAGE An exception occurred during push on URI https://github.com/kimmingyeong225/totalJSP.git: https://github.com/kimmingyeong225/totalJSP.git: not authorized
+!STACK 0
+org.eclipse.jgit.errors.TransportException: https://github.com/kimmingyeong225/totalJSP.git: not authorized
+	at org.eclipse.jgit.transport.TransportHttp.connect(TransportHttp.java:695)
+	at org.eclipse.jgit.transport.TransportHttp.connect(TransportHttp.java:637)
+	at org.eclipse.jgit.transport.TransportHttp.openPush(TransportHttp.java:541)
+	at org.eclipse.jgit.transport.PushProcess.execute(PushProcess.java:140)
+	at org.eclipse.jgit.transport.Transport.push(Transport.java:1557)
+	at org.eclipse.egit.core.op.PushOperation.run(PushOperation.java:269)
+	at org.eclipse.egit.ui.internal.push.PushJob.performJob(PushJob.java:86)
+	at org.eclipse.egit.ui.internal.jobs.RepositoryJob.run(RepositoryJob.java:59)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.eclipse.egit.ui 4 0 2024-07-02 16:56:03.206
+!MESSAGE Can't connect to any repository: https://github.com/kimmingyeong225/totalJSP.git (https://github.com/kimmingyeong225/totalJSP.git: not authorized)
