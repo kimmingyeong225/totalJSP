@@ -1409,3 +1409,20 @@ org.eclipse.jgit.errors.TransportException: https://github.com/kimmingyeong225/j
 
 !ENTRY org.eclipse.egit.ui 4 0 2024-07-03 17:42:13.422
 !MESSAGE Can't connect to any repository: https://github.com/kimmingyeong225/jsp_1.git (https://github.com/kimmingyeong225/jsp_1.git: not authorized)
+
+!ENTRY org.eclipse.egit.core 4 0 2024-07-03 17:45:33.732
+!MESSAGE An exception occurred during push on URI https://github.com/kimmingyeong225/totalJSP.git: https://github.com/kimmingyeong225/totalJSP.git: not authorized
+!STACK 0
+org.eclipse.jgit.errors.TransportException: https://github.com/kimmingyeong225/totalJSP.git: not authorized
+	at org.eclipse.jgit.transport.TransportHttp.connect(TransportHttp.java:695)
+	at org.eclipse.jgit.transport.TransportHttp.connect(TransportHttp.java:637)
+	at org.eclipse.jgit.transport.TransportHttp.openPush(TransportHttp.java:541)
+	at org.eclipse.jgit.transport.PushProcess.execute(PushProcess.java:140)
+	at org.eclipse.jgit.transport.Transport.push(Transport.java:1557)
+	at org.eclipse.egit.core.op.PushOperation.run(PushOperation.java:269)
+	at org.eclipse.egit.ui.internal.push.PushJob.performJob(PushJob.java:86)
+	at org.eclipse.egit.ui.internal.jobs.RepositoryJob.run(RepositoryJob.java:59)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.eclipse.egit.ui 4 0 2024-07-03 17:45:33.732
+!MESSAGE Can't connect to any repository: https://github.com/kimmingyeong225/totalJSP.git (https://github.com/kimmingyeong225/totalJSP.git: not authorized)
