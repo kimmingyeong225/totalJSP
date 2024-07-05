@@ -5,12 +5,7 @@
 <head>
 <meta charset="UTF-8">
 <title>공통 헤더 만들어 보기</title>
-<style type="text/css">
-	li{
-	border-style: dotted
-	mar
-	}
-</style>
+
 <link rel="stylesheet" type="text/css" href="styles.css">
 </head>
 <body>

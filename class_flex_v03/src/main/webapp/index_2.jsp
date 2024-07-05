@@ -6,6 +6,11 @@
 <meta charset="UTF-8">
 <title>Insert title here</title>
 <style type="text/css">
+	
+	* {
+		margin: 0px;
+		padding: 0px;
+	}
 
 	body {
 		background-color: #CD5C5C;
