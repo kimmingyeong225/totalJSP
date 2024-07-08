@@ -19,4 +19,44 @@
     <welcome-file>default.htm</welcome-file>
     <welcome-file>default.jsp</welcome-file>
   </welcome-file-list>
+  <servlet>
+    <description></description>
+    <display-name>ReadPostsServlet</display-name>
+    <servlet-name>ReadPostsServlet</servlet-name>
+    <servlet-class>com.tenco.servlet.ReadPostsServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ReadPostsServlet</servlet-name>
+    <url-pattern>/ReadPostsServlet</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>DeletePostServlet</display-name>
+    <servlet-name>DeletePostServlet</servlet-name>
+    <servlet-class>com.tenco.servlet.DeletePostServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>DeletePostServlet</servlet-name>
+    <url-pattern>/DeletePostServlet</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>DeltalPostServlet</display-name>
+    <servlet-name>DeltalPostServlet</servlet-name>
+    <servlet-class>com.tenco.servlet.DeltalPostServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>DeltalPostServlet</servlet-name>
+    <url-pattern>/DeltalPostServlet</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>UpdatePostServlet</display-name>
+    <servlet-name>UpdatePostServlet</servlet-name>
+    <servlet-class>com.tenco.servlet.UpdatePostServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>UpdatePostServlet</servlet-name>
+    <url-pattern>/UpdatePostServlet</url-pattern>
+  </servlet-mapping>
 </web-app>

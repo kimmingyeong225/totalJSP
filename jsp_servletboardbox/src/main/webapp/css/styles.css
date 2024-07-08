@@ -1,1 +1,32 @@
 @charset "UTF-8";
+
+
+
+body {
+	margin: 0;
+	padding: 0;
+	background-color: #f4f4f4;
+	display: flex;
+	justify-content: center;
+	height: 100vh;
+	flex-direction: column;
+}
+
+h2 {
+	background-color: pink;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+table {
+		display: flex;
+		justify-content: center;
+		background-color: #f0f0f0;
+		height: 50vh;
+		align-items: center;
+}
+
+button {
+	background-color: red;
+}
