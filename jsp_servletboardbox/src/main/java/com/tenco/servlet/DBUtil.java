@@ -1,19 +1,33 @@
 package com.tenco.servlet;
 
+
 import java.sql.Connection;
-import java.sql.DriverManager;
 import java.sql.SQLException;
 
-public class DBUtil {
+import javax.naming.InitialContext;
+import javax.naming.NamingException;
+import javax.sql.DataSource;
 
-	private static final String URL = "jdbc:mysql://localhost:3306/demo6?serverTimezone=Asia/Seoul";
-	private static final String USER = "root";
-	private static final String PASSWORD = "asd123";
-	
-	public static Connection getConnection() throws ClassNotFoundException, SQLException {
-		
-		Class.forName("com.mysql.cj.jdbc.Driver");
-		return DriverManager.getConnection(URL, USER, PASSWORD);
-	}
-	
+public class DBUtil {
+    
+    private static DataSource dataSource;
+    
+    // 정적 초기화 블록, static block
+    static {
+        try {
+            // InitialContext 객체를 생성하여 JNDI API기술을 통해
+            // 존재하는 리소스를 찾는 방법!
+            InitialContext ctx = new InitialContext();
+            dataSource=(DataSource) ctx.lookup("java:comp/env/jdbc/MySQL");
+        } catch (NamingException e) {
+            e.printStackTrace();
+        }
+        
+    }
+    
+    public static Connection getConnection() throws SQLException {
+        return dataSource.getConnection();
+    }
+    
+    
 }
