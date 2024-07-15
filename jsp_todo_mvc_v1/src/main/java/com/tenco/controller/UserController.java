@@ -5,6 +5,8 @@ import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
+import jakarta.servlet.http.HttpSession;
+
 import java.io.IOException;
 
 import com.tenco.model.UserDAO;
@@ -62,7 +64,7 @@ public class UserController extends HttpServlet {
 		System.out.println("action : " + action);
 		switch (action) {
 		case "/signIn":
-			
+			signIn(request,response);
 			break;
 		case "/signUp":
 			signUp(request, response);
@@ -71,6 +73,43 @@ public class UserController extends HttpServlet {
 			response.sendError(HttpServletResponse.SC_NOT_FOUND);
 			break;
 		}
+	}
+	
+	/*
+	 * 로그인 처리 기능
+	 * @param request
+	 * @param response
+	 */
+	private void signIn(HttpServletRequest request, HttpServletResponse response) throws IOException {
+		// URL, 인증검사, 유효성 검사, 서비스 로직, DAO --> 전달, 뷰를 호출
+		String username = request.getParameter("username");
+		String password = request.getParameter("password");
+		
+		if(username == null || password.trim().isEmpty()) {
+			response.sendRedirect("signIn?message=invalid");
+			return;
+		}
+	
+		
+		UserDTO user =  userDAO.getUserByUsername(username);
+		if(user != null && user.getPassword().equals(password)) {
+			
+			HttpSession session = request.getSession();
+			session.setAttribute("principal", user);
+			
+			// 로그인 --> todoFrom 화면 이동 처리
+			// TODO - todoForm.jsp 이동 기능 추가
+			response.sendRedirect("/mvc/todo/todoform");
+			
+			System.out.println("로그인 처리 완료");
+		} else {
+			
+			response.sendRedirect("signIn?message=invalid");
+			
+		}
+		// null <-- 회원가입 x
+		
+		// 비밀번호 == dto.getPassword();
 	}
 	
 	/*
@@ -102,12 +141,13 @@ public class UserController extends HttpServlet {
 				.email(email)
 				.build();
 		
+		//int resultRowCount = 0;
 		int resultRowCount = userDAO.addUser(userDTO);
-		System.out.println("resultRowCount" + resultRowCount);
+		//System.out.println("resultRowCount" + resultRowCount);
 		if(resultRowCount == 1) {
-			response.sendRedirect("user/signIn?message=success");
+			response.sendRedirect("signIn?message=success");
 		} else {
-			response.sendRedirect("user/signIn?message=error");
+			response.sendRedirect("signUp?message=error");
 		}
 	}
 

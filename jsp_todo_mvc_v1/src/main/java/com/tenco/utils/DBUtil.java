@@ -13,8 +13,7 @@ public class DBUtil {
 	
 	// 정적 초기화 블록
 	static {
-		// TODO - 삭제 예정
-		System.out.println("111111111111111111");
+
 		try {
 			// InitialContext 객체를 생성하여 JNDI API 기술을 통해 존재하는 리소를 찾는 방법
 			InitialContext ctx = new InitialContext();
