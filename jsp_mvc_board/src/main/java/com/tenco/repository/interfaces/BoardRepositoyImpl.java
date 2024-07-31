@@ -14,6 +14,9 @@ public class BoardRepositoyImpl implements BoardRepository{
 	private static final String SELECT_ALL_BOARDS = " select * from board order by created_at desc limit ? offset ? ";
 	private static final String COUNT_ALL_BOARDS = " select count(*) as count from board " ;
 	private static final String INSERT_BOARD_SQL = " INSERT INTO board(user_id, title, content) values (?, ?, ?) " ;
+	private static final String DELETE_BOARD_SQL = " DELETE FROM board WHERE id = ? ";
+	private static final String SELECT_BOARD_BY_ID = " SELECT * FROM board WHERE id = ? ";
+	private static final String UPDATE_BOARD_SQL = " UPDATE board SET title = ?, content = ? WHERE id = ? ";
 	
 	@Override
 	public void addBoard(Board board) {
@@ -52,8 +55,28 @@ public class BoardRepositoyImpl implements BoardRepository{
 
 	@Override
 	public Board getBoardById(int id) {
+		Board board = null;
+		try (Connection conn = DBUtil.getConnection();
+			PreparedStatement pstmt = conn.prepareStatement(SELECT_BOARD_BY_ID)){
+			pstmt.setInt(1, id);
+			try (ResultSet rs = pstmt.executeQuery()){
+				if (rs.next()) {
+					board = Board.builder()
+							.id(rs.getInt("id"))
+							.userId(rs.getInt("user_id"))
+							.title(rs.getString("title"))
+							.content(rs.getString("content"))
+							.createdAt(rs.getTimestamp("created_at"))
+							.build();
+				}
+			} catch (Exception e) {
+				e.printStackTrace();
+			}
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		return board;
 		
-		return null;
 	}
 
 	@Override

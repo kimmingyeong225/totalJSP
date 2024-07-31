@@ -9,8 +9,16 @@
 		<item key="DIALOG_FONT_NAME" value="1|맑은 고딕|9.0|0|WINDOWS|1|-12|0|0|0|400|0|0|0|1|0|0|0|0|맑은 고딕"/>
 		<list key="ShowViewDialog.STORE_EXPANDED_CATEGORIES_ID">
 			<item value="General"/>
+			<item value="API Tools"/>
+			<item value="Debug"/>
+			<item value="Git"/>
 			<item value="Gradle"/>
+			<item value="Help"/>
+			<item value="Java"/>
+			<item value="Java Browsing"/>
+			<item value="Language Servers"/>
 			<item value="Plug-in Development"/>
+			<item value="Terminal"/>
 		</list>
 	</section>
 </section>
