@@ -142,9 +142,7 @@
              Note: The pattern used is equivalent to using pattern="common" -->
         <Valve className="org.apache.catalina.valves.AccessLogValve" directory="logs" pattern="%h %l %u %t &quot;%r&quot; %s %b" prefix="localhost_access_log" suffix=".txt"/>
 
-      <Context docBase="C:\work_web_kmk\.metadata\.plugins\org.eclipse.wst.server.core\tmp0\wtpwebapps\ROOT" path="" reloadable="false"/><Context docBase="C:\work_web_kmk\.metadata\.plugins\org.eclipse.wst.server.core\tmp0\wtpwebapps\green_university" path="/green" reloadable="true" source="org.eclipse.jst.jee.server:green_university">
-	<Resource auth="Container" connectionTimeout="30000" driverClassName="com.mysql.cj.jdbc.Driver" factory="com.zaxxer.hikari.HikariJNDIFactory" idleTimeout="60000" jdbcUrl="jdbc:mysql://192.168.0.129:3306/universitydb?serverTimezone=Asia/Seoul" maxLifetime="1800000" maximumPoolSize="10" minimumIble="5" name="jdbc/university" password="0000" type="javax.sql.DataSource" uniqueResourceName="MyUniversity" username="user1"/>
-</Context></Host>
+      <Context docBase="C:\work_web_kmk\.metadata\.plugins\org.eclipse.wst.server.core\tmp0\wtpwebapps\jsp_file_upload" path="" reloadable="true" source="org.eclipse.jst.jee.server:jsp_file_upload"/></Host>
     </Engine>
   </Service>
 </Server>
